@@ -15,6 +15,22 @@ function App() {
 
     return <img src={onPhotoChange}></img>;
   }
+
+  // Set components Paragraph
+
+  function About(props){
+  const {About} = props;
+  return <p> {About} </p>
+  }
+
+
+    // Set components Date
+
+function Date (props){
+  const {Date} = props;
+  return <h2>{Date}</h2>
+}
+
   //Set components Button
   function Button(props) {
     const { next } = props;
@@ -58,22 +74,12 @@ function App() {
         {/* <img src="https://cdn.mos.cms.futurecdn.net/XKRX6MbwHQEbqhvqjMPyAa-1200-80.jpg"></img> */}
 
         <h2>About</h2>
-        <p>
-          Muffin bear claw cheesecake powder jelly-o cake lemon drops gummi
-          bears. Liquorice chocolate cake donut sweet roll cotton candy chupa
-          chups. Gingerbread icing halvah apple pie jelly sesame snaps. Gummies
-          macaroon marzipan icing apple pie. Chocolate dessert dragée tart bear
-          claw pudding carrot cake sweet. Soufflé cake dessert chocolate bar
-          jelly-o chocolate cheesecake. Tootsie roll croissant pie brownie bear
-          claw cupcake jelly-o sweet roll ice cream. Jujubes cheesecake dragée
-          cheesecake icing lemon drops. Chupa chups tiramisu gummies halvah
-          liquorice cheesecake ice cream. Cake sweet cake sesame snaps dragée
-          sugar plum candy fruitcake. Soufflé apple pie caramels gummi bears
-          chocolate cake caramels sweet roll jelly beans dessert. Jelly-o gummi
-          bears cotton candy candy bear claw danish dessert.{" "}
+        <p className= "About">
+
+<About About = {photoOfPlanet.explanation} />
         </p>
         <h3>
-          Date: <p>March, 11,2019</p>
+          Date: <Date Date= {photoOfPlanet.date} />
         </h3>
         <Button next={photoOfPlanet} />
       </div>
