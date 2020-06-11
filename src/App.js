@@ -33,10 +33,11 @@ function App() {
     )
     .then((response) => {
       setPlanet(response.data) ;
-      console.log(setPlanet.url);
+  
     })
     .catch((error) => console.error(error));
 
+    console.log("Use Effect is activated")
   // Axios End
   },[]);
   return (
