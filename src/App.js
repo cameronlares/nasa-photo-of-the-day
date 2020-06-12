@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 import axios from "axios";
+import {About,Date,Button}  from './Components/Components'
 
 //I want to increase the index by 1
 //When I click on Next Photo, axios will give me the second index of .url
+
+
+  // Set components Paragraph
+
+ 
 
 function App() {
   const [photoOfPlanet, setPlanet] = useState([]);
@@ -16,26 +21,6 @@ function App() {
     return <img src={onPhotoChange}></img>;
   }
 
-  // Set components Paragraph
-
-  function About(props){
-  const {About} = props;
-  return <p> {About} </p>
-  }
-
-
-    // Set components Date
-
-function Date (props){
-  const {Date} = props;
-  return <h2>{Date}</h2>
-}
-
-  //Set components Button
-  function Button(props) {
-    const { next } = props;
-    return <button onClick={next}> Next Planet</button>;
-  }
   useEffect (() => {
 
   // const nextPhoto = () => {
@@ -81,7 +66,7 @@ function Date (props){
         <h3>
           Date: <Date Date= {photoOfPlanet.date} />
         </h3>
-        <Button next={photoOfPlanet} />
+        <Button next={photoOfPlanet} /> 
       </div>
     </div>
   );
